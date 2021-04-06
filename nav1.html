@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header {
+            background-color: aqua;
+            width: 100%;
+            font-size: 18px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-transform: capitalize;
+            position: relative;
+        }
+
+        nav {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul li {
+            margin: 0 20px;
+            cursor: pointer
+        }
+
+        .toggle {
+            cursor: pointer;
+            font-size: 24px;
+            display: none;
+        }
+
+        @media screen and (max-width:767px) {
+            .toggle {
+                display: block;
+            }
+
+            .list {
+                display: block;
+                position: absolute;
+                top: 68px;
+                width: 100%;
+                background-color: black;
+                color: wheat;
+                left: -100%;
+                transition: all .4s linear;
+                text-align: center;
+            }
+
+            .list li {
+                margin-bottom: 15px;
+                transition: all .3s ease;
+                position: relative;
+            }
+
+            .list li::before {
+                content: '';
+                position: absolute;
+                width: 14.5%;
+                height: 1px;
+                background-color: aqua;
+                text-align: center;
+                top: 25px;
+                left: 43%;
+                transform: scale(0);
+                transition: all .3s ease;
+            }
+
+            .list li:hover::before {
+                transform: scale(1);
+            }
+
+            .list li:hover {
+                color: aqua;
+            }
+
+            .list li:first-of-type {
+                margin-top: 15px;
+            }
+
+            .list.open {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                Brand Name
+            </div>
+            <ul class="list">
+                <li>home</li>
+                <li>about</li>
+                <li>blog</li>
+                <li>services</li>
+                <li>contact</li>
+            </ul>
+            <div class="toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        let toggleBtn = document.querySelector('.fa-bars');
+        toggleBtn.addEventListener('click', () => {
+            document.querySelector('.list').classList.toggle('open');
+            if (document.querySelector('.list').classList.contains('open')) {
+                toggleBtn.classList.remove('fa-bars');
+                toggleBtn.classList.add('fa-times');
+            } else {
+                toggleBtn.classList.remove('fa-times');
+                toggleBtn.classList.add('fa-bars');
+            }
+        })
+    </script>
+</body>
+
+</html>
