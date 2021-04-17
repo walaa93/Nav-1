@@ -1,0 +1,360 @@
+body,html{
+    height: 100%;
+    font-family: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.custom{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: #e2d5d5;
+}
+.custom .header{
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%,11%);
+}
+.custom h1{
+    color:#900c3f ;
+    text-align: center;
+    font-size: 40px;
+  
+    
+}
+.custom .custom-color{
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%,4%)
+
+}
+.custom .color-switch{
+    list-style: none;
+    text-align: center;
+}
+.color-switch li{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+.custom-color .color-switch li:first-child{
+    background-color: #900c3f;
+}
+.custom-color .color-switch li:nth-child(2){
+    background-color:#19d3da ;
+}
+.custom-color .color-switch li:nth-child(3){
+    background-color:#c0392b ;
+}
+.custom-color .color-switch li:nth-child(4){
+    background-color:#2c3e50 ;
+}
+.color-1 h1{
+    color: #900c3f;
+}
+.color-1 .counter{
+    background-color: #900c3f;
+    box-shadow: inset 20px -20px 100px #900c3f,
+        inset -20px 20px 100px #900c3f,
+        inset -20px -20px 100px #900c3f,
+        inset 20px 20px 100px #900c3f;
+}
+.color-1 .footer{
+    background-color: #810034;
+}
+.color-1 .custom-window{
+    background-color: #691636;
+}
+.color-2 .custom{
+    background-color: #eeeeee;
+}
+.color-2 h1{
+    color: #13868a;
+}
+.color-2 .counter{
+    background-color: #19d3da;
+    box-shadow: inset 20px -20px 100px #19d3da,
+        inset -20px 20px 100px #19d3da,
+        inset -20px -20px 100px #19d3da,
+        inset 20px 20px 100px #19d3da;
+}
+.color-2 .footer{
+    background-color: #0e3f41;;
+}
+.color-2 .window .custom-window {
+    background-color: #2f5c5e;
+}
+.color-3 .custom{
+    background-color: #f4f4f4;
+}
+.color-3 h1{
+    color: #ad392c;
+}
+.color-3 .counter{
+    background-color: #c0392b;
+    box-shadow: inset 20px -20px 100px #c0392b,
+        inset -20px 20px 100px #c0392b,
+        inset -20px -20px 100px #c0392b,
+        inset 20px 20px 100px #c0392b;
+}
+.color-3 .footer{
+    background-color: #3d140f;
+}
+.color-3 .window .custom-window {
+    background-color: #8a2d22;
+}
+.color-4 .custom{
+    background-color: #f4f4f4;
+}
+.color-4 h1{
+    color: #4a637c;
+}
+.color-4 .counter{
+    background-color: #2c3e50;
+    box-shadow: inset 20px -20px 100px #2c3e50,
+        inset -20px 20px 100px #2c3e50,
+        inset -20px -20px 100px #2c3e50,
+        inset 20px 20px 100px #2c3e50;
+}
+.color-4 .footer{
+    background-color: #2b445e;
+}
+.color-4 .window .custom-window {
+    background-color: #2c3a47;
+}
+.counter {
+    width: 300px;
+    height: 310px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 54px;
+    color: #fff;
+        background-color: #900c3f;
+        box-shadow: inset 20px -20px 100px #900c3f,
+            inset -20px 20px 100px #900c3f,
+            inset -20px -20px 100px #900c3f,
+            inset 20px 20px 100px #900c3f; 
+    
+    z-index: 1;
+
+}
+ 
+.padd-counter{
+    padding: 20px;
+}
+
+button {
+    outline: none;
+    box-shadow: inset 5px 5px 10px #cdc9c3,
+        inset -5px 5px 10px #cdc9c3, inset -5px 5px 10px #cdc9c3;
+    background-color: #cdc9c3;
+    transition: all .3s;
+}
+
+.counter .span-count {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #111;
+    color: #fff;
+    height: 60px;
+    outline: none;
+    border: none;
+    padding-left: 8px;
+    font-size: 40px;
+    line-height: 60px;
+    border-radius: 2px;
+}
+
+.reset .reset-btn {
+    float: left;
+    width: 17%;
+}
+
+.reset .reset-span {
+    width: 83%;
+    float: left;
+}
+
+.counter .reset button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid rgb(199, 81, 81);
+}
+
+.counter .reset button:hover {
+    border: 2px solid #f00;
+}
+
+.reset .info-reset {
+    display: inline-block;
+    line-height: 30px;
+    width: 100px;
+    height: 30px;
+    font-size: 25px;
+    /* -webkit-text-stroke: 1.1px #111; */
+}
+
+.count-group,
+.reset {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    /* -webkit-text-stroke: 1.2px #111; */
+    margin-top: 2px
+}
+
+.decrese-btn {
+    float: left;
+    width: 50%;
+    position: relative;
+}
+
+.decrese-btn button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 0, 0.479);
+}
+
+.decrese-btn button:hover {
+    border: 2px solid #ff0
+}
+
+.decrese-btn span {
+    position: absolute;
+    margin-left: 7px;
+    font-size: 25px;
+}
+
+.increase-btn {
+    width: 50%;
+    float: left;
+
+}
+
+.increase-btn span {
+    display: block;
+    font-size: 44px;
+    text-align: center;
+}
+
+.increase-btn button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 255, 0.39);
+    margin: auto;
+    display: block;
+}
+
+.increase-btn button:hover {
+    border: 2px solid #00f;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    background-color: #810034;  
+    bottom: 0;
+    height: 50px; 
+   color: #fff3e2;
+    
+}
+.footer p{
+    padding-top: 14px;
+    font-size: 16px;
+    font-weight: 400;   
+}
+
+.window {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #f5f5f550;
+    display: none;
+    z-index: 99999;
+}
+
+.window .custom-window {
+    width: 350px;
+    height: 180px;
+    border: 1px solid #bbbbbb;
+    /* color: #fff; */
+    color: #fbecec;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #691636; 
+    border-radius: 4px;
+
+}
+
+.window .custom-window p {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;  
+}
+
+.window .custom-window button {
+    padding: 12px 20px;
+    font-size: 20px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    background-color: #d8ebe4;
+    box-shadow: none;
+}
+
+.window .custom-window button:first-of-type {
+    margin-right: 8px;
+}
+
+@media(max-width:360px){
+    .custom .header{
+        position: absolute;
+        top: 9.8%;
+        left: 50%;
+        transform: translate(-50%,9.8%);
+    }
+    .custom .custom-color{
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        transform: translate(-50%,3%)
+    
+    }
+    .custom h1{
+        font-size: 40px;
+    }
+    .counter {
+        width: 275px;
+        height: 305px;
+    
+    }
+}
